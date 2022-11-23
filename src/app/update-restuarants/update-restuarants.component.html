@@ -1,0 +1,91 @@
+<form #updateRestForm="ngForm">
+<div class="container mt-5 text-center  border border-dark bg-transparent  mb-5" ><b><h1>UPDATE NEW RESTURANT</h1></b>
+    <br>
+    <div class="row">
+
+        <div class="col">
+            <div>
+                <input [(ngModel)]="restDetails['id']" name="id" type="text" placeholder="Resturant Id" class="form-control">
+            </div>
+            <br>
+            <div>
+                <input [(ngModel)]="restDetails['neighborhood']" name="nighbourhood" type="text" placeholder="Resturent nighbourhood " class="form-control">
+            </div>
+            <br>
+            <div>
+                <input [(ngModel)]="restDetails['photograph']" name="photograph" type="text" placeholder="Resturant image" class="form-control">
+            </div>
+            <h3>operating hours</h3>
+            <label for="text">
+                <input [(ngModel)]="restDetails['operating_hours']['Monday']" name="monday" type="text" placeholder="monday" class="form-control">
+                <br>
+                <input [(ngModel)]="restDetails['operating_hours']['Tuesday']" name="tuesday" type="text" placeholder="tuesday" class="form-control">
+                <br>
+                <input [(ngModel)]="restDetails['operating_hours']['Wednesday']" name="wednesday" type="text" placeholder="wednesday" class="form-control">
+                <br>
+                <input [(ngModel)]="restDetails['operating_hours']['Thursday']" name="thirsday" type="text" placeholder="thirsday" class="form-control">
+                <br>
+                <input [(ngModel)]="restDetails['operating_hours']['Friday']" name="friday" type="text" placeholder="friday" class="form-control">
+                <br>
+                <input [(ngModel)]="restDetails['operating_hours']['Saturday']" name="saturday" type="text" placeholder="saturday" class="form-control">
+                <br>
+                <input [(ngModel)]="restDetails['operating_hours']['Sunday']" name="sunday" type="text" placeholder="sunday" class="form-control">
+
+                <br>
+
+            </label>
+
+        </div>
+        <div class="col">
+            <div>
+                <input [(ngModel)]="restDetails['name']" name="rname" type="text" placeholder="resutant name" class="form-control">
+            </div>
+            <br>
+            <div>
+                <input [(ngModel)]="restDetails['address']" name="address" type="text" placeholder="resturant address " class="form-control">
+            </div>
+            <br>
+            <div>
+                <input [(ngModel)]="restDetails['cuisine_type']" name="cuisine_type" type="text" placeholder="resturant cusine type" class="form-control">
+        </div>
+        <div *ngFor="let item of restDetails.reviews">
+         <h3>reviews</h3>
+         <div>
+            <input [(ngModel)]="item['name']" name="cname" type="text" placeholder="name" class="form-control">
+        </div>
+        <br>
+        <div>
+            <input [(ngModel)]="item['date']" name="date" type="text" placeholder="date" class="form-control">
+        </div>
+        <br>
+        <div>
+            <input [(ngModel)]="item['rating']" name="rating" type="text" placeholder="rating" class="form-control">
+        </div>
+        <br>
+        <div>
+        <input [(ngModel)]="item['comments']" name="comments" type="text" placeholder="comments" class="form-control">
+    
+        </div>
+        </div>
+    <h3>location</h3>
+    <div>
+        <input [(ngModel)]="restDetails['latlng']['lat']" name="lat" type="text" placeholder="latitude" class="form-control">
+    </div>
+    <br>
+    <div>
+        <input [(ngModel)]="restDetails['latlng']['lng']" name="lng" type="text" placeholder="lonjitude" class="form-control">
+    </div>
+    <br><br><br><br><br>
+    <div>
+    <button (click)="updateRestuarant(updateRestForm)" class="btn btn-info" type="submit">Update</button>
+    <br>
+</div>
+
+        
+    </div>
+    
+
+
+</div>
+</div>
+

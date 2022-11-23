@@ -1,0 +1,83 @@
+
+
+
+        angular-front end technology
+        ------------------------------
+    basic command in angular
+
+    1: ng new projectname - crete a angular project
+
+    2: ng serve/ng serve --open = run angular project
+
+    3:ng g c component-name -create components
+    
+    4:path seup: {path:'type path',comonent:component name}
+                   inside route array in approuting modulr
+
+
+    basic concepts
+    --------------
+     * to run json file:npx json-server --watch filename.json --port 3000
+
+    1:module:to import third party libraries-root module is called App module
+
+    2:component: it will generate html,css,ts -root component -App comonent
+
+    3:to setup path component -use appRoutingModule
+
+    4:router oulet selector - to dispaly html in browser according to the user request
+
+    5: angular services -reusable code and can be shared across components
+
+    6: dependancy injection - to share data between dependet classes
+       syntax : access-specifier variable-name:dependent-class-name
+       access-specifier:to access a variable in a pgm that defined by using acesss-specifier
+       public / private /protected
+       inside the construtor of a class 
+    7:asyncronuse funtion  -  Observable :it can handle one more asyncronuse funtion
+       rxjs(react of xtension for javascript ) library all defined in this library :
+       2 state are asyncronuse funtion :reolve state :subscribe()
+                                        :reject state   :catch()
+
+      8: data Binding : to share data with in a component
+        8.1:one way binding : sharing done in only one direction at appRoutingModule
+         => ts(component) to html(view)
+              => using string interpulation   -{{ property-name}} in the html page
+              =>using property binding  -[attribute-name]="property-name in html
+            
+         => (view)html to ts(component)
+          => Event Binding - (event-name)= "funtion call()"
+          =>Event Binding using $event - (event-name)="funtion call($event)"
+
+          8.2: two way binding= sharing only two way direction at a time
+            => ngModel - import formsModule ,[{ngModel}]="property-name
+
+
+       9: Angular Directive:  to manipualte dom
+        9.1=>  component Directive
+        9.2=>  structural Directive - to add/remove html element based on some cindition/length of an array
+
+
+        9.2.1=>*ngIF="condition"
+        9.2.2=>*ngFor ="let variable-name of array-name"
+
+       10: activated route : provide access to information about a route associated with a component that is loaded at a outlet 
+
+       11:ngform- to track the form values(update cheyyan vendi)
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
